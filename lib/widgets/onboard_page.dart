@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class OnboardPage extends StatelessWidget {
@@ -16,21 +15,53 @@ class OnboardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(40),
+      padding: const EdgeInsets.symmetric(horizontal: 30),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset(image,height: 800, ),
+          const SizedBox(height: 60),
+
+          Image.asset(
+            'assets/images/islami.png',
+            height: 130,
+          ),
+
+          const SizedBox(height: 40),
+
+          Expanded(
+            flex: 3,
+            child: Center(
+              child: Image.asset(
+                image,
+                fit: BoxFit.contain,
+                height: 250,
+              ),
+            ),
+          ),
+
            SizedBox(height: 30),
+
           Text(
             title,
-            style:  TextStyle(fontSize: 24, color: Color(0xffE2BE7F)),
-          ),
-           SizedBox(height: 15),
-          Text(
-            description,
             textAlign: TextAlign.center,
-            style:  TextStyle(fontSize: 20, color: Color(0xffE2BE7F)),
+            style:  TextStyle(
+              fontSize: 24,
+              color: Color(0xffE2BE7F),
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+
+           SizedBox(height: 15),
+
+          Expanded(
+            flex: 2,
+            child: Text(
+              description,
+              textAlign: TextAlign.center,
+              style:  TextStyle(
+                fontSize: 20,
+                color: Color(0xffE2BE7F),
+              ),
+            ),
           ),
         ],
       ),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:islami_on_boarding/main.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../widgets/onboard_page.dart';
 import 'home_screen.dart';
@@ -26,20 +25,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       backgroundColor: const Color(0xff202020),
       body: Stack(
         children: [
-          Positioned(
-            top: 40,
-            left: 0,
-            right: 0,
-            child: Center(
-              child: Image.asset(
-                'assets/images/islami.png',
-                height: 171,
-              ),
-            ),
-          ),
+
 
           Padding(
-            padding: const EdgeInsets.only(top: 80),
+            padding: const EdgeInsets.only(top: 50),
             child: PageView(
               controller: _controller,
               onPageChanged: (index) {
@@ -62,7 +51,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   description: 'Read, and your Lord is the Most Generous',
                 ),
                 OnboardPage(
-                  image: 'assets/images/welcome.png',
+                  image: 'assets/images/bearish.png',
                   title: 'Bearish',
                   description: 'Praise the name of your Lord, the Most High',
                 ),
